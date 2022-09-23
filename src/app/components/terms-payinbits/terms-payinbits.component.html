@@ -1,0 +1,36 @@
+<main>
+  <header class="pt-[102px] bg-white mt-[70px]">
+    <div class="container mx-auto xl:px-16 2xl:px-36">
+      <h1 class="font-extrabold text-[50px] text-[#2B2B2B]">
+        Terms and Conditions
+      </h1>
+      <div class="flex items-center gap-x-[60px] mt-12">
+        <a href="" class="capitalize" routerLink="/terms-and-conditions">General terms</a>
+        <a class="capitalize text-blue font-bold" routerLink="terms-and-conditions/payinbits"
+          >frenn pay in bit TERMS
+        </a>
+        <a href="" class="capitalize">Frenn’s Loan Terms</a>
+      </div>
+
+      <div class="flex mt-10 relative">
+        <div class="sticky h-screen top-24">
+          <div class="top-0 py-7 w-[271px]">
+            <a
+              type="button"
+              *ngFor="let item of data"
+              href="terms/payinbits#{{ item?.id }}"
+              (click)="[(selectedIndex = item.title)]"
+              class="nav-links text-sm font-medium mb-4 capitalize text-left max-w-[250px] flex flex-col"
+            >
+              <span [class.text-blue]="selectedIndex === item.title">
+                {{ item?.title }}
+              </span>
+            </a>
+          </div>
+        </div>
+        <app-terms-payinbits-data></app-terms-payinbits-data>
+      </div>
+    </div>
+  </header>
+  <app-footer></app-footer>
+</main>

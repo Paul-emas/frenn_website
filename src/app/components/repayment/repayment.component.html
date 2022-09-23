@@ -1,0 +1,121 @@
+<header
+  class="min-h-screen bg-[#F7FFFF] flex items-center overflow-hidden z-30 relative"
+>
+  <div
+    [ngClass]="openModal ? 'opacity-100 visible' : 'invisible opacity-0'"
+    class="fixed w-full h-full z-20 flex items-center justify-center duration-300"
+  >
+    <div
+      (click)="openModal = false"
+      class="absolute w-full h-full bg-black bg-opacity-60"
+    ></div>
+    <div
+      [ngClass]="
+        openModal ? 'opacity-100 delay-300 scale-100' : 'opacity-0 scale-110'
+      "
+      class="duration-200"
+    >
+      <app-otp-card (closeModal)="closeModal(false)"></app-otp-card>
+    </div>
+  </div>
+  <div
+    class="absolute w-[612px] h-[612px] bg-primary rounded-full -right-40 -z-10 -bottom-56"
+  ></div>
+  <div
+    class="absolute w-[612px] h-[612px] bg-[#D9FFFF] rounded-full right-24 -z-20 -bottom-[450px]"
+  ></div>
+  <img
+    class="absolute -left-16 bottom-0 w-[345.39px] h-[639.55px] object-contain"
+    src="assets/images/repayment-logo.png"
+    alt="Frenn repayment banner"
+  />
+  <div class="container mx-auto px-[30px] md:px-9 xl:px-16 2xl:px-36 mt-[70px]">
+    <div class="">
+      <div class="grid grid-cols-2">
+        <div class="text-center">
+          <img
+            src="assets/images/repayment-bg.png"
+            alt="Frenn repayment banner"
+            class="w-[469px] h-[469px] mx-auto"
+          />
+          <div class="text-2xl font-bold mt-6">Repayment</div>
+          <p class="max-w-[425px] mx-auto mt-5">
+            you're expected to pay back what you've spent on your credit plan on
+            the due date.
+          </p>
+        </div>
+        <div>
+          <div
+            class="rounded-[10px] bg-white shadow-2xl w-[494px] h-[570px] ml-auto pt-14 px-11"
+          >
+            <h1 class="text-black font-bold text-[29px]">
+              Welcome to Repayment
+            </h1>
+            <p class="mt-[5px] text-sm text-[#444150]">
+              Please enter the phone number associated with your account on
+              Frenn mobile App.
+            </p>
+            <form
+              class="mt-[72px]"
+              [formGroup]="checkoutForm"
+              (ngSubmit)="onSubmit()"
+            >
+              <label for="phone" class="text-black font-semibold"
+                >Your phone number for OTP to Login
+              </label>
+              <input
+                type="number"
+                placeholder="Registered phone number on frenn app"
+                class="w-full border mt-2 h-12 px-5 rounded-md border-[#D9D9D9] outline-none"
+                id="phone"
+                formControlName="phone"
+              />
+              <div class="mt-10">
+                <p class="text-sm text-[#0F0F0F]">
+                  How do you want to get codes?
+                </p>
+
+                <div class="flex mt-4">
+                  <div class="flex items-center">
+                    <div class="border-2 border-primary p-[5px] rounded-full">
+                      <div class="w-2.5 h-2.5 bg-primary rounded-full"></div>
+                    </div>
+                    <div class="ml-4 font-semibold">Text Message</div>
+                  </div>
+                  <!-- <div class="flex items-center ml-6">
+                    <div class="border-2 border-primary p-[5px] rounded-full">
+                      <div class="w-2.5 h-2.5 bg-primary rounded-full"></div>
+                    </div>
+                    <div class="ml-4 font-semibold">Phone Call</div>
+                  </div> -->
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-[#2D2D3D] h-12 rounded-md mt-[68px] text-primary flex items-center justify-center"
+              >
+                <span>Continue</span>
+                <svg
+                  class="ml-2"
+                  width="21"
+                  height="12"
+                  viewBox="0 0 21 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.7759 11.7007C14.1518 12.0947 14.7666 12.1004 15.1493 11.7134L20.0934 6.71345C20.2793 6.52542 20.384 6.26834 20.384 6C20.384 5.73166 20.2793 5.47458 20.0934 5.28655L15.1493 0.286551C14.7666 -0.100439 14.1518 -0.0947351 13.7759 0.299292C13.4001 0.693318 13.4056 1.32646 13.7883 1.71345L17.0381 5L1.93209 5C1.39574 5 0.960938 5.44771 0.960938 6C0.960938 6.55228 1.39574 7 1.93209 7L17.0381 7L13.7883 10.2866C13.4056 10.6735 13.4001 11.3067 13.7759 11.7007Z"
+                    fill="#00EEEB"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

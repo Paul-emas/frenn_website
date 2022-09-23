@@ -1,0 +1,61 @@
+<div
+  class="bg-white rounded-[10px] w-[494px] h-[507px] overflow-hidden text-center mt-[70px]"
+>
+  <img
+    src="assets/images/password.jpg"
+    alt="repayment otp image"
+    class="w-[100px] h-[100px] mt-[51px] mx-auto"
+  />
+  <div class="text-[29px] text-black font-bold mt-[35px]">OTP Verification</div>
+  <p class="text-[#444150]">enter the OTP send to mobile phone</p>
+  <code-input
+    class="code-input max-w-[309px] mx-auto"
+    [isCodeHidden]="true"
+    [codeLength]="4"
+    [initialFocusField]="0"
+    (codeChanged)="onCodeChanged($event)"
+    (codeCompleted)="onCodeCompleted($event)"
+  >
+  </code-input>
+  <div class="mt-4 text-sm">
+    If you didn’t receive a Code!
+    <span class="text-lg text-[#027776] font-semibold ml-2 cursor-pointer"
+      >Resend OTP</span
+    >
+  </div>
+  <button
+    type="button"
+    class="mt-14 active:scale-95 active:translate-y-1 duration-200"
+    (click)="closeModal(close)"
+  >
+    <svg
+      width="44"
+      height="44"
+      viewBox="0 0 44 44"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21.8333 42.6667C33.3393 42.6667 42.6667 33.3393 42.6667 21.8333C42.6667 10.3274 33.3393 1 21.8333 1C10.3274 1 1 10.3274 1 21.8333C1 33.3393 10.3274 42.6667 21.8333 42.6667Z"
+        stroke="black"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M28.082 15.5835L15.582 28.0835"
+        stroke="black"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M15.582 15.5835L28.082 28.0835"
+        stroke="black"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+</div>

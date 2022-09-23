@@ -1,0 +1,68 @@
+<main>
+  <header class="pt-[7px] md:pt-[102px] bg-white mt-[70px]">
+    <div class="container mx-auto px-[22px] md:px-9 xl:px-16 2xl:px-36">
+      <h1 class="font-extrabold text-xl md:text-[50px] text-[#2B2B2B]">
+        Terms and Conditions
+      </h1>
+      <div class="flex items-center gap-x-[25px] md:gap-x-[60px] mt-5 md:mt-12">
+        <button (click)="openMenu = !openMenu" class="block md:hidden">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="3" cy="3" r="3" fill="black" />
+            <circle cx="12" cy="3" r="3" fill="black" />
+            <circle cx="21" cy="3" r="3" fill="black" />
+            <circle cx="3" cy="12" r="3" fill="black" />
+            <circle cx="12" cy="12" r="3" fill="black" />
+            <circle cx="21" cy="12" r="3" fill="black" />
+            <circle cx="3" cy="21" r="3" fill="black" />
+            <circle cx="12" cy="21" r="3" fill="black" />
+            <circle cx="21" cy="21" r="3" fill="black" />
+          </svg>
+        </button>
+        <a
+          class="capitalize text-blue font-bold text-xs md:text-base"
+          routerLink="/terms-and-conditions"
+          >General terms</a
+        >
+        <!-- <a class="capitalize" routerLink="/terms/payinbits"
+          >frenn pay in bit TERMS
+        </a> -->
+        <a class="capitalize text-xs md:text-base" routerLink="/loan-terms"
+          >Frenn’s Loan Terms</a
+        >
+      </div>
+
+      <div class="flex mt-5 md:mt-10 relative">
+        <div
+          [class]="
+            openMenu
+              ? 'translate-y-0 scale-100 opacity-100 visible'
+              : 'invisible md:visible opacity-0 md:opacity-100 translate-y-10 md:translate-y-0 scale-95 md:scale-100'
+          "
+          class="absolute bg-white md:sticky md:h-screen top-38 md:top-24 left-0 md:left-0 rounded-[10px] shadow-lg md:shadow-none overflow-y-auto h-96 md:overflow-visible duration-300"
+        >
+          <div class="top-0 pt-4 md:py-7 w-[183px] md:w-[271px]">
+            <a
+              type="button"
+              *ngFor="let item of data"
+              href="terms-and-conditions#{{ item?.id }}"
+              (click)="[(selectedIndex = item.title), (openMenu = false)]"
+              class="nav-links text-[10px] md:text-sm font-medium mb-4 capitalize text-left max-w-[200px] md:max-w-[250px] flex flex-col px-4 md:px-0"
+            >
+              <span [class.text-blue]="selectedIndex === item.title">
+                {{ item?.title }}
+              </span>
+            </a>
+          </div>
+        </div>
+        <app-terms-data></app-terms-data>
+      </div>
+    </div>
+  </header>
+  <app-footer></app-footer>
+</main>

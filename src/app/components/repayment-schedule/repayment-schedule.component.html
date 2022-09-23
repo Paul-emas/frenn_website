@@ -1,0 +1,294 @@
+<div class="bg-[#F7FFFF] py-[139px]">
+  <div
+    [ngClass]="openModal ? 'opacity-100 visible' : 'invisible opacity-0'"
+    class="fixed w-full h-full z-20 flex items-center justify-center duration-300 inset-0"
+  >
+    <div
+      (click)="openModal = false"
+      class="absolute w-full h-full bg-black bg-opacity-60"
+    ></div>
+    <div
+      [ngClass]="
+        openModal ? 'opacity-100 delay-300 scale-100' : 'opacity-0 scale-110'
+      "
+      class="duration-200"
+    >
+      <app-repayment-card></app-repayment-card>
+    </div>
+  </div>
+  <div class="container px-[30px] md:px-9 xl:px-16 2xl:px-48 mx-auto">
+    <h1 class="text-[40px] font-bold">Repayment Schedule</h1>
+    <div class="grid grid-cols-5 gap-x-[31px]">
+      <div class="col-span-3">
+        <div
+          class="w-full bg-white h-[169px] rounded-[10px] repayment-card-shadow py-5 px-[30px] my-[30px]"
+        >
+          <div class="flex items-center justify-between">
+            <div class="capitalize font-semibold text-black text-xl">
+              holder information
+            </div>
+            <div class="text-[10px] text-[#2D2D3C]">
+              <span>Loan ID:</span>
+              <span class="text-base font-semibold ml-2">576421</span>
+            </div>
+          </div>
+          <div class="mt-5 flex items-center">
+            <div>
+              <img
+                src="https://www.pixinvent.com/materialize-material-design-admin-template/laravel/demo-4/images/user/12.jpg"
+                alt="Repayment user profileimage"
+                class="w-[71px] h-[71px] rounded-full object-cover"
+              />
+            </div>
+            <div class="ml-5">
+              <div class="text-xl font-bold">John Doe</div>
+              <div class="text-lg text-[#5F5F5F] font-normal">
+                21 Road, Off 2nd Avenue, Lagos
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full bg-white h-[516px] rounded-[10px] repayment-card-shadow py-[37px] px-[30px] my-[30px]"
+        >
+          <div class="capitalize font-semibold text-black text-xl">
+            Payment methods
+          </div>
+          <div class="mt-10">
+            <div
+              class="w-full h-[58px] border border-[#C0C0C0] rounded-[10px] flex items-center px-4 cursor-pointer"
+            >
+              <div
+                class="border-2 w-5 h-5 border-primary rounded-full flex items-center justify-center"
+              >
+                <div class="w-2.5 h-2.5 bg-primary rounded-full"></div>
+              </div>
+              <div class="mx-4">
+                <img
+                  src="assets/images/mastercard.jpg"
+                  alt="credit card image"
+                  class="w-[35.56px] h-5"
+                />
+              </div>
+              <div class="text-xl font-semibold text-[#898585]">
+                539983******0071
+              </div>
+            </div>
+            <div
+              class="w-full h-[279px] border border-[#C0C0C0] rounded-[10px] pl-4 pr-6 cursor-pointer mt-10 bg-white"
+            >
+              <div class="flex items-center h-[58px]">
+                <div
+                  class="border-2 w-5 h-5 border-[#D3D3D3] rounded-full flex items-center justify-center"
+                >
+                  <div class="w-2.5 h-2.5 bg-transparent rounded-full"></div>
+                </div>
+                <div class="ml-4 mr-[22.41px]">
+                  <img
+                    src="assets/images/house.jpg"
+                    alt="credit card image"
+                    class="w-[32.59px] h-[38px]"
+                  />
+                </div>
+                <div class="text-xl font-semibold text-black">
+                  Bank Transfer | Cash Deposit
+                </div>
+                <svg
+                  class="ml-auto rotate-180"
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.579165 0.564285C0.96969 0.17376 1.60285 0.17376 1.99338 0.564285L6.00056 4.57146L10.0077 0.564285C10.3983 0.17376 11.0314 0.17376 11.4219 0.564285L11.5792 0.7215C11.9697 1.11202 11.9697 1.74519 11.5792 2.13571L6.70766 7.00721C6.31714 7.39774 5.68397 7.39774 5.29345 7.00721L0.421951 2.13571C0.0314264 1.74519 0.0314262 1.11202 0.42195 0.7215L0.579165 0.564285Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <div class="w-[409px] ml-[94px]">
+                <div
+                  class="text-[10px] text-[#828282] border-b border-[#EAEAEB] pb-[18px]"
+                >
+                  Use below account to transfer loan amount from internet
+                  banking or your banking app. Cash can also be deposited to
+                  below account for loan repayment
+                </div>
+                <div class="grid grid-cols-2 gap-y-5 mt-[29px]">
+                  <div class="text-xs text-[#828282]">Bank Name</div>
+                  <div class="text-[15px] text-black font-medium">
+                    Zenith Bank
+                  </div>
+                  <div class="text-xs text-[#828282]">Account Number</div>
+                  <div class="text-[15px] text-black font-medium">
+                    2004343533
+                  </div>
+                  <div class="text-xs text-[#828282]">Beneficiary Name</div>
+                  <div class="text-[15px] text-black font-medium">
+                    Frenn Credit Limited
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <div
+          class="w-full bg-white h-[114px] rounded-[10px] repayment-card-shadow py-5 px-[30px] my-[30px]"
+        >
+          <div class="flex">
+            <div>
+              <img
+                src="assets/images/repayment-logo.jpg"
+                alt="Frenn logo"
+                class="w-11 h-[73.33px] object-contain"
+              />
+            </div>
+            <div class="ml-[33px] mt-1">
+              <div class="text-sm mb-1.5">Available balance</div>
+              <div class="text-[32px] font-semibold">₦9,600</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-x-5 my-[30px]">
+          <div
+            class="bg-white w-[305px] h-[56px] rounded-[10px] repayment-card-shadow pl-[30px] flex items-center text-xl font-medium"
+          >
+            Custom Payment
+          </div>
+          <button
+            (click)="openModal = true"
+            class="bg-[#2D2D3D] text-primary w-[119px] h-[56px] rounded-[10px] repayment-card-shadow flex items-center text-xl font-medium justify-center"
+          >
+            Pay Now
+          </button>
+        </div>
+        <div
+          class="w-full bg-white h-[338px] rounded-[10px] repayment-card-shadow py-6 pl-[30px] pr-[34px] my-[30px] border border-[#FF0000]"
+        >
+          <div class="flex justify-between border-b pb-[26px] border-[#00B5D1]">
+            <div>
+              <div class="text-xs text-[#FF0000]">Due Amount</div>
+              <div class="font-semibold text-[26.2px] text-[#FF0000]">
+                ₦1278
+              </div>
+              <div
+                class="w-[85px] h-[32px] rounded-lg bg-[#00EEEB26] font-medium flex items-center justify-center"
+              >
+                Pay in 4
+              </div>
+            </div>
+            <div>
+              <div class="text-xs text-[#FF0000]">Due Date</div>
+              <div class="font-semibold text-xl text-[#FF0000]">2-Mar-2022</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-6 gap-y-2 mt-[26px]">
+            <div class="text-xs col-span-2 text-[#363636]">Base Amount</div>
+            <div class="text-xs col-span-4 text-[#363636] font-bold">
+              N 1200
+            </div>
+            <div class="text-xs col-span-2 text-[#363636]">Interest Rate</div>
+            <div class="text-xs col-span-4 text-[#363636] font-bold">6.5%</div>
+            <div class="text-xs col-span-2 text-[#363636]">
+              Transaction Date
+            </div>
+            <div class="text-xs col-span-4 text-[#363636] font-bold">
+              2-Feb-2022
+            </div>
+          </div>
+          <button
+            class="h-[45px] text-[#FF0000] rounded-[10px] capitalize w-full bg-[#2D2D3D] mt-[35px] font-semibold"
+          >
+            Pay Now
+          </button>
+        </div>
+        <div
+          class="w-full bg-white h-[338px] rounded-[10px] repayment-card-shadow py-6 pl-[30px] pr-[34px] my-[30px]"
+        >
+          <div class="flex justify-between border-b pb-[26px] border-[#00B5D1]">
+            <div>
+              <div class="text-xs">Due Amount</div>
+              <div class="font-semibold text-[26.2px] text-[#2D2D3D]">
+                ₦1278
+              </div>
+              <div
+                class="w-[85px] h-[32px] rounded-lg bg-[#00EEEB26] font-medium flex items-center justify-center"
+              >
+                Pay in 4
+              </div>
+            </div>
+            <div>
+              <div class="text-xs">Due Date</div>
+              <div class="font-semibold text-xl text-[#2D2D3D]">2-Mar-2022</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-6 gap-y-2 mt-[26px]">
+            <div class="text-xs col-span-2 text-[#363636]">Base Amount</div>
+            <div class="text-xs col-span-4 text-[#363636] font-bold">
+              N 1200
+            </div>
+            <div class="text-xs col-span-2 text-[#363636]">Interest Rate</div>
+            <div class="text-xs col-span-4 text-[#363636] font-bold">6.5%</div>
+            <div class="text-xs col-span-2 text-[#363636]">
+              Transaction Date
+            </div>
+            <div class="text-xs col-span-4 text-[#363636] font-bold">
+              2-Feb-2022
+            </div>
+          </div>
+          <button
+            class="h-[45px] text-primary rounded-[10px] capitalize w-full bg-[#2D2D3D] mt-[35px] font-semibold"
+          >
+            Pay Now
+          </button>
+        </div>
+        <div
+          class="w-full bg-white h-[338px] rounded-[10px] repayment-card-shadow py-6 pl-[30px] pr-[34px] my-[30px]"
+        >
+          <div class="flex justify-between border-b pb-[26px] border-[#00B5D1]">
+            <div>
+              <div class="text-xs text-[#7A7A7A]">Due Amount</div>
+              <div class="font-semibold text-[26.2px] text-[#7A7A7A]">
+                ₦1278
+              </div>
+              <div
+                class="w-[85px] h-[32px] rounded-lg bg-[#F2F5FA] text-[#7A7A7A] font-medium flex items-center justify-center"
+              >
+                Pay in 4
+              </div>
+            </div>
+            <div>
+              <div class="text-xs text-[#7A7A7A]">Due Date</div>
+              <div class="font-semibold text-xl text-[#7A7A7A]">2-Mar-2022</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-6 gap-y-2 mt-[26px]">
+            <div class="text-xs col-span-2 text-[#7A7A7A]">Base Amount</div>
+            <div class="text-xs col-span-4 text-[#7A7A7A] font-bold">
+              N 1200
+            </div>
+            <div class="text-xs col-span-2 text-[#7A7A7A]">Interest Rate</div>
+            <div class="text-xs col-span-4 text-[#7A7A7A] font-bold">6.5%</div>
+            <div class="text-xs col-span-2 text-[#7A7A7A]">
+              Transaction Date
+            </div>
+            <div class="text-xs col-span-4 text-[#7A7A7A] font-bold">
+              2-Feb-2022
+            </div>
+          </div>
+          <button
+            disabled
+            class="h-[45px] text-[#7A7A7A] rounded-[10px] capitalize w-full bg-[#C9C9C9] mt-[35px] font-semibold"
+          >
+            Paid
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

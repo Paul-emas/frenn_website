@@ -1,0 +1,568 @@
+<section class="py-9 md:py-24 bg-[#FAFCFF]">
+  <div class="container mx-auto px-[30px] md:px-9 xl:px-16 2xl:px-36">
+    <div
+      class="w-[133px] md:w-[167px] mx-auto h-[26px] md:h-8 py-1.5 md:py-0.5 px-[18px] text-center bg-blueLight text-xs md:text-lg text-blue capitalize font-semibold rounded-[10px]"
+    >
+      Testimonials
+    </div>
+    <div
+      class="text-gray150 md:text-black text-[25px] md:text-[40px] mx-auto leading-[30px] md:leading-[48px] font-bold mt-1 max-w-[597px] text-center"
+    >
+      Here’s what other members of the tribe have to say
+    </div>
+    <div
+      class="text-sm md:text-lg max-w-[300px] md:max-w-full text-gray150 text-center mx-auto mt-5"
+    >
+      Our goal is to make your life easier, providing simple and flexible loans
+      that are tailored for you.
+    </div>
+
+    <div class="mt-36 hidden md:block">
+      <swiper
+        [config]="config"
+        (swiper)="onSwiper($event)"
+        (slideChange)="onSlideChange()"
+        class="swiper-carousel"
+      >
+        <ng-template swiperSlide>
+          <div class="w-full h-[234px] carousel-cell">
+            <div
+              class="w-[114px] h-[114px] rounded-full mx-auto carousel-image overflow-hidden relative -top-14"
+            >
+              <img
+                src="assets/images/carousel/bg-1.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-10">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="w-full h-[234px] carousel-cell">
+            <div
+              class="w-[114px] h-[114px] rounded-full mx-auto carousel-image overflow-hidden relative -top-14"
+            >
+              <img
+                src="assets/images/carousel/bg-2.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-10">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="w-full h-[234px] carousel-cell">
+            <div
+              class="w-[114px] h-[114px] rounded-full mx-auto carousel-image overflow-hidden relative -top-14"
+            >
+              <img
+                src="assets/images/carousel/bg-3.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-10">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="w-full h-[234px] carousel-cell">
+            <div
+              class="w-[114px] h-[114px] rounded-full mx-auto carousel-image overflow-hidden relative -top-14"
+            >
+              <img
+                src="assets/images/carousel/bg-1.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-10">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="w-full h-[234px] carousel-cell">
+            <div
+              class="w-[114px] h-[114px] rounded-full mx-auto carousel-image overflow-hidden relative -top-14"
+            >
+              <img
+                src="assets/images/carousel/bg-2.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-10">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="w-full h-[234px] carousel-cell">
+            <div
+              class="w-[114px] h-[114px] rounded-full mx-auto carousel-image overflow-hidden relative -top-14"
+            >
+              <img
+                src="assets/images/carousel/bg-3.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-10">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+
+    <div class="mt-[35px] block md:hidden">
+      <swiper
+        [config]="mobileConfig"
+        (swiper)="onSwiper($event)"
+        (slideChange)="onSlideChange()"
+        class="swiper-carousel2"
+      >
+        <ng-template swiperSlide>
+          <div class="w-full h-[250px] carousel-cell">
+            <div
+              class="w-[68.47px] h-[68.47px] rounded-full mx-auto carousel-image2 overflow-hidden relative -top-10"
+            >
+              <img
+                src="assets/images/carousel/bg-1.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-8">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="w-full h-[250px] carousel-cell">
+            <div
+              class="w-[68.47px] h-[68.47px] rounded-full mx-auto carousel-image2 overflow-hidden relative -top-10"
+            >
+              <img
+                src="assets/images/carousel/bg-2.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-8">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="w-full h-[250px] carousel-cell">
+            <div
+              class="w-[68.47px] h-[68.47px] rounded-full mx-auto carousel-image2 overflow-hidden relative -top-10"
+            >
+              <img
+                src="assets/images/carousel/bg-3.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-8">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="w-full h-[250px] carousel-cell">
+            <div
+              class="w-[68.47px] h-[68.47px] rounded-full mx-auto carousel-image2 overflow-hidden relative -top-10"
+            >
+              <img
+                src="assets/images/carousel/bg-1.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-8">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="w-full h-[250px] carousel-cell">
+            <div
+              class="w-[68.47px] h-[68.47px] rounded-full mx-auto carousel-image2 overflow-hidden relative -top-10"
+            >
+              <img
+                src="assets/images/carousel/bg-2.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-8">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="w-full h-[250px] carousel-cell">
+            <div
+              class="w-[68.47px] h-[68.47px] rounded-full mx-auto carousel-image2 overflow-hidden relative -top-10"
+            >
+              <img
+                src="assets/images/carousel/bg-3.png"
+                alt="Frenn Customer testimonial image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="text-center -mt-8">
+              <div class="text-sm text-[#222222] font-semibold">
+                Michelle Johnson, Australia
+              </div>
+              <svg
+                class="mx-auto mt-3"
+                width="25"
+                height="15"
+                viewBox="0 0 25 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.2948 15C21.0932 15 20.8933 14.9383 20.7265 14.8166L14.3483 10.1023C14.1283 9.93771 14 9.69086 14 9.42857V0.857143C14 0.385714 14.4107 0 14.9167 0H24.0833C24.5893 0 25 0.385714 25 0.857143V9.42857C25 9.9 24.5893 10.2857 24.0833 10.2857H20.7998L22.1602 13.8549C22.2977 14.2149 22.162 14.616 21.8302 14.8389C21.6725 14.9469 21.4855 15 21.2948 15Z"
+                  fill="#0045CD"
+                />
+                <path
+                  d="M7.29483 15C7.09317 15 6.89333 14.9383 6.7265 14.8166L0.348333 10.1023C0.128333 9.93771 0 9.69086 0 9.42857V0.857143C0 0.385714 0.410667 0 0.916667 0H10.0833C10.5893 0 11 0.385714 11 0.857143V9.42857C11 9.9 10.5893 10.2857 10.0833 10.2857H6.79983L8.16017 13.8549C8.29767 14.2149 8.162 14.616 7.83017 14.8389C7.6725 14.9469 7.4855 15 7.29483 15Z"
+                  fill="#0045CD"
+                />
+              </svg>
+              <p
+                class="text-black text-xs font-light max-w-[417px] mx-auto mt-5 px-3 text-center"
+              >
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit, sed
+                Lorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sedLorem ipsum dolor sit amet, consectetur oit adipiscing elit,
+                sed
+              </p>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+</section>

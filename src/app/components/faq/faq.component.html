@@ -1,0 +1,547 @@
+<main>
+  <section
+    class="bg-lighter pt-[22px] md:pt-[75px] mt-[50px] md:mt-[70px] pb-9 md:pb-56"
+  >
+    <div class="container mx-auto px-[30px] md:px-9 xl:px-16 2xl:px-36">
+      <h1 class="text-xl md:text-[55px] text-black font-bold">
+        Frequently Asked Questions
+      </h1>
+      <div class="mt-3 md:mt-16 mx-auto">
+        <div class="md:flex gap-x-[42px]">
+          <div>
+            <div
+              class="w-full md:w-[240px] md:sticky top-28 md:h-screen grid grid-cols-2 gap-2.5 md:block pb-[33.78px] md:pb-0 md:gap-0"
+            >
+              <div
+                *ngFor="let info of sideData"
+                (click)="activeGroup = info.group"
+                [class]="
+                  activeGroup === info.group
+                    ? 'bg-[#2C2C2C] text-white font-bold duration-200'
+                    : 'font-medium'
+                "
+                class="w-full h-[33.18px] md:h-[52px] justify-center items-center flex rounded-[5px] md:rounded-[10px] md:mb-[30px] text-center cursor-pointer text-xs md:text-[15px] faq-card"
+              >
+                {{ info.name }}
+              </div>
+            </div>
+          </div>
+          <div>
+            <div *ngIf="activeGroup === 'about'">
+              <div
+                *ngFor="let info of data_1; let i = index"
+                class="py-3 md:py-6 mb-2.5 md:mb-5 rounded-[5px] faq-card"
+              >
+                <div class="accordion items-start px-6 md:px-4">
+                  <div class="md:ml-5 cursor-pointer">
+                    <div
+                      (click)="toggleAccordion($event, i, data_1)"
+                      class="flex w-full items-center justify-between"
+                    >
+                      <div class="text-xs md:text-[22px] font-medium">
+                        {{ info.ques }}
+                      </div>
+                      <svg
+                        [class]="
+                          info.isActive || info.id === 0 ? '' : 'rotate-180'
+                        "
+                        class="duration-200 pr-1"
+                        width="31"
+                        height="30"
+                        viewBox="0 0 31 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 19L15.5 11.5L23 19"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                      [ngClass]="
+                        info.isActive || info.id === 0
+                          ? 'h-auto mt-3 duration-200'
+                          : 'h-0 duration-200'
+                      "
+                    >
+                      <p *ngFor="let ans of info.ans" class="mb-4">
+                        {{ ans.text }}
+                        <a
+                          *ngIf="ans.isLink"
+                          href="https://play.google.com/store/apps/details?id=com.mfb.frennapp"
+                          target="_blank"
+                          class="font-bold"
+                          >Link to app</a
+                        >
+                      </p>
+                      <ul *ngIf="info.list" class="list-decimal ml-6 mb-4">
+                        <li
+                          *ngFor="let list of info.list"
+                          class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                        >
+                          {{ list }}
+                        </li>
+                      </ul>
+                      <p
+                        *ngFor="let ans of info.afterText"
+                        class="mb-4 font-bold"
+                      >
+                        {{ ans }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="activeGroup === 'signup'">
+              <div
+                *ngFor="let info of data_2; let i = index"
+                class="py-3 md:py-6 mb-2.5 md:mb-5 rounded-[5px] faq-card"
+              >
+                <div class="accordion items-start px-6 md:px-4">
+                  <div class="md:ml-5 cursor-pointer">
+                    <div
+                      (click)="toggleAccordion($event, i, data_2)"
+                      class="flex w-full items-center justify-between"
+                    >
+                      <div class="text-xs md:text-[22px] font-medium">
+                        {{ info.ques }}
+                      </div>
+                      <svg
+                        [class]="
+                          info.isActive || info.id === 0 ? '' : 'rotate-180'
+                        "
+                        class="duration-200 pr-1"
+                        width="31"
+                        height="30"
+                        viewBox="0 0 31 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 19L15.5 11.5L23 19"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                      [ngClass]="
+                        info.isActive || info.id === 0
+                          ? 'h-auto mt-3 duration-200'
+                          : 'h-0 duration-200'
+                      "
+                    >
+                      <p *ngFor="let ans of info.ans" class="mb-4">
+                        {{ ans.text }}
+                        <a
+                          *ngIf="ans.isLink"
+                          href="https://play.google.com/store/apps/details?id=com.mfb.frennapp"
+                          target="_blank"
+                          class="font-bold"
+                          >Link to app</a
+                        >
+                      </p>
+                      <ul *ngIf="info.list" class="list-decimal ml-6 mb-4">
+                        <li
+                          *ngFor="let list of info.list"
+                          class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                        >
+                          {{ list.name }}
+                          <a
+                            *ngIf="list.isLink"
+                            href="https://play.google.com/store/apps/details?id=com.mfb.frennapp"
+                            target="_blank"
+                            class="font-bold"
+                            >Link to app</a
+                          >
+                        </li>
+                      </ul>
+                      <p
+                        *ngFor="let ans of info.afterText"
+                        class="mb-4 font-bold"
+                      >
+                        {{ ans.text }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="activeGroup === 'credit'">
+              <div
+                *ngFor="let info of data_3; let i = index"
+                class="py-3 md:py-6 mb-2.5 md:mb-5 rounded-[5px] faq-card"
+              >
+                <div class="accordion items-start px-6 md:px-4">
+                  <div class="md:ml-5 cursor-pointer">
+                    <div
+                      (click)="toggleAccordion($event, i, data_3)"
+                      class="flex w-full items-center justify-between"
+                    >
+                      <div class="text-xs md:text-[22px] font-medium">
+                        {{ info.ques }}
+                      </div>
+                      <svg
+                        [class]="
+                          info.isActive || info.id === 0 ? '' : 'rotate-180'
+                        "
+                        class="duration-200 pr-1"
+                        width="31"
+                        height="30"
+                        viewBox="0 0 31 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 19L15.5 11.5L23 19"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="text-xs md:text-base font-medium max-w-5xl overflow-hidden"
+                      [ngClass]="
+                        info.isActive || info.id === 0
+                          ? 'h-auto mt-3 duration-200'
+                          : 'h-0 duration-200'
+                      "
+                    >
+                      <p *ngFor="let ans of info.ans" class="mb-4">
+                        <span
+                          [class]="
+                            ans.isRed ? 'text-red-600' : 'text-[#6E6E6E]'
+                          "
+                          >{{ ans.text }}</span
+                        >
+                        <a
+                          *ngIf="ans.isLink"
+                          href="https://play.google.com/store/apps/details?id=com.mfb.frennapp"
+                          target="_blank"
+                          class="font-bold"
+                          >Link to app</a
+                        >
+                      </p>
+                      <ul *ngIf="info.list" class="list-decimal ml-6 mb-4">
+                        <li
+                          *ngFor="let list of info.list"
+                          class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                        >
+                          {{ list }}
+                        </li>
+                      </ul>
+                      <p
+                        *ngFor="let ans of info.afterText"
+                        class="mb-4 font-bold"
+                      >
+                        {{ ans.text }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="activeGroup === 'loan'">
+              <div
+                *ngFor="let info of data_4; let i = index"
+                class="py-3 md:py-6 mb-2.5 md:mb-5 rounded-[5px] faq-card"
+              >
+                <div class="accordion items-start px-6 md:px-4">
+                  <div class="md:ml-5 cursor-pointer">
+                    <div
+                      (click)="toggleAccordion($event, i, data_4)"
+                      class="flex w-full items-center justify-between"
+                    >
+                      <div class="text-xs md:text-[22px] font-medium">
+                        {{ info.ques }}
+                      </div>
+                      <svg
+                        [class]="
+                          info.isActive || info.id === 0 ? '' : 'rotate-180'
+                        "
+                        class="duration-200 pr-1"
+                        width="31"
+                        height="30"
+                        viewBox="0 0 31 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 19L15.5 11.5L23 19"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                      [ngClass]="
+                        info.isActive || info.id === 0
+                          ? 'h-auto mt-3 duration-200'
+                          : 'h-0 duration-200'
+                      "
+                    >
+                      <p *ngFor="let ans of info.ans" class="mb-4">
+                        {{ ans.text }}
+                        <a
+                          *ngIf="ans.isLink"
+                          href="https://play.google.com/store/apps/details?id=com.mfb.frennapp"
+                          target="_blank"
+                          class="font-bold"
+                          >Link to app</a
+                        >
+                      </p>
+                      <ul *ngIf="info.list" class="list-decimal ml-6 mb-4">
+                        <li
+                          *ngFor="let list of info.list"
+                          class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                        >
+                          {{ list }}
+                        </li>
+                      </ul>
+                      <p
+                        *ngFor="let ans of info.afterText"
+                        class="mb-4 font-bold"
+                      >
+                        {{ ans.text }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="activeGroup === 'late'">
+              <div
+                *ngFor="let info of data_5; let i = index"
+                class="py-3 md:py-6 mb-2.5 md:mb-5 rounded-[5px] faq-card"
+              >
+                <div class="accordion items-start px-6 md:px-4">
+                  <div class="md:ml-5 cursor-pointer">
+                    <div
+                      (click)="toggleAccordion($event, i, data_5)"
+                      class="flex w-full items-center justify-between"
+                    >
+                      <div class="text-xs md:text-[22px] font-medium">
+                        {{ info.ques }}
+                      </div>
+                      <svg
+                        [class]="
+                          info.isActive || info.id === 0 ? '' : 'rotate-180'
+                        "
+                        class="duration-200 pr-1"
+                        width="31"
+                        height="30"
+                        viewBox="0 0 31 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 19L15.5 11.5L23 19"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                      [ngClass]="
+                        info.isActive || info.id === 0
+                          ? 'h-auto mt-3 duration-200'
+                          : 'h-0 duration-200'
+                      "
+                    >
+                      <p *ngFor="let ans of info.ans" class="mb-4">
+                        {{ ans.text }}
+                        <a
+                          *ngIf="ans.isLink"
+                          href="https://play.google.com/store/apps/details?id=com.mfb.frennapp"
+                          target="_blank"
+                          class="font-bold"
+                          >Link to app</a
+                        >
+                      </p>
+                      <ul *ngIf="info.list" class="list-decimal ml-6 mb-4">
+                        <li
+                          *ngFor="let list of info.list"
+                          class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                        >
+                          {{ list }}
+                        </li>
+                      </ul>
+                      <p
+                        *ngFor="let ans of info.afterText"
+                        class="mb-4 font-bold"
+                      >
+                        {{ ans.text }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="activeGroup === 'account'">
+              <div
+                *ngFor="let info of data_6; let i = index"
+                class="py-3 md:py-6 mb-2.5 md:mb-5 rounded-[5px] faq-card"
+              >
+                <div class="accordion items-start px-6 md:px-4">
+                  <div class="md:ml-5 cursor-pointer">
+                    <div
+                      (click)="toggleAccordion($event, i, data_6)"
+                      class="flex w-full items-center justify-between"
+                    >
+                      <div class="text-xs md:text-[22px] font-medium">
+                        {{ info.ques }}
+                      </div>
+                      <svg
+                        [class]="
+                          info.isActive || info.id === 0 ? '' : 'rotate-180'
+                        "
+                        class="duration-200 pr-1"
+                        width="31"
+                        height="30"
+                        viewBox="0 0 31 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 19L15.5 11.5L23 19"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                      [ngClass]="
+                        info.isActive || info.id === 0
+                          ? 'h-auto mt-3 duration-200'
+                          : 'h-0 duration-200'
+                      "
+                    >
+                      <p *ngFor="let ans of info.ans" class="mb-4">
+                        {{ ans.text }}
+                        <a
+                          *ngIf="ans.isLink"
+                          href="https://play.google.com/store/apps/details?id=com.mfb.frennapp"
+                          target="_blank"
+                          class="font-bold"
+                          >Link to app</a
+                        >
+                      </p>
+                      <ul *ngIf="info.list" class="list-decimal ml-6 mb-4">
+                        <li
+                          *ngFor="let list of info.list"
+                          class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                        >
+                          {{ list }}
+                        </li>
+                      </ul>
+                      <p
+                        *ngFor="let ans of info.afterText"
+                        class="mb-4 font-bold"
+                      >
+                        {{ ans.text }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="activeGroup === 'security'">
+              <div
+                *ngFor="let info of data_7; let i = index"
+                class="py-3 md:py-6 mb-2.5 md:mb-5 rounded-[5px] faq-card"
+              >
+                <div class="accordion items-start px-6 md:px-4">
+                  <div class="md:ml-5 cursor-pointer">
+                    <div
+                      (click)="toggleAccordion($event, i, data_7)"
+                      class="flex w-full items-center justify-between"
+                    >
+                      <div class="text-xs md:text-[22px] font-medium">
+                        {{ info.ques }}
+                      </div>
+                      <svg
+                        [class]="
+                          info.isActive || info.id === 0 ? '' : 'rotate-180'
+                        "
+                        class="duration-200 pr-1"
+                        width="31"
+                        height="30"
+                        viewBox="0 0 31 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 19L15.5 11.5L23 19"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                      [ngClass]="
+                        info.isActive || info.id === 0
+                          ? 'h-auto mt-3 duration-200'
+                          : 'h-0 duration-200'
+                      "
+                    >
+                      <p *ngFor="let ans of info.ans" class="mb-4">
+                        {{ ans.text }}
+                        <a
+                          *ngIf="ans.isLink"
+                          href="https://play.google.com/store/apps/details?id=com.mfb.frennapp"
+                          target="_blank"
+                          class="font-bold"
+                          >Link to app</a
+                        >
+                      </p>
+                      <ul *ngIf="info.list" class="list-decimal ml-6 mb-4">
+                        <li
+                          *ngFor="let list of info.list"
+                          class="text-xs md:text-base font-medium max-w-5xl text-[#6E6E6E] overflow-hidden"
+                        >
+                          {{ list }}
+                        </li>
+                      </ul>
+                      <p
+                        *ngFor="let ans of info.afterText"
+                        class="mb-4 font-bold"
+                      >
+                        {{ ans.text }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-footer>
+    <app-contact-form #content></app-contact-form>
+  </app-footer>
+</main>
